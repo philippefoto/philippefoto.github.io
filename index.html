@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHILIPPE FOTO - Plantilla HTML5 Fotografía Profesional</title>
+  <meta name="description" content="Servicios y soluciones de fotógrafos profesionales para clientes satisfechos. Incluye galería interactiva, calculadora de presupuesto y formulario.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <div class="logo-icon" aria-label="Logo Philippe Foto">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="camera-icon-svg">
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+            <circle cx="12" cy="13" r="3"/>
+          </svg>
+        </div>
+        PHILIPPE <span>FOTO</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+          <li><a href="#galeria" class="nav-link">Galería</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="calculadora.html" class="nav-link">Cotizador</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contacto" class="btn-cta">Reservar Sesión</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="hero-section">
+    <div class="container">
+      <div class="hero-content-center">
+        <div class="status-badge" style="margin-left: auto; margin-right: auto;">
+          <span class="dot-green"></span>
+          Disponible para nuevas sesiones
+        </div>
+        <h1 class="hero-headline">
+          Historias con
+          <em>Luz, Pasión y Estilo</em>
+        </h1>
+        <p class="hero-text" style="margin-left: auto; margin-right: auto;">
+          Fotografía de autor especializada en retrato urbano y de estudio, fotografía automotriz y cobertura de eventos.
+        </p>
+        <div class="hero-buttons" style="justify-content: center;">
+          <a href="#galeria" class="btn-cta">Explorar Galería</a>
+          <a href="calculadora.html" class="btn-secondary">Cotizador Standalone</a>
+          <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <span class="stat-num">$1500</span>
+          <span class="stat-label">Servicios y Paquetes</span>
+        </div>
+        <div>
+          <span class="stat-num">3</span>
+          <span class="stat-label">Disciplinas Pro</span>
+        </div>
+        <div>
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Garantía de Calidad</span>
+        </div>
+        <div>
+          <span class="stat-num">48h</span>
+          <span class="stat-label">Entrega Vista Previa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ SECTION -->
+  <section id="sobre-mi">
+    <div class="container">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-subtitle">De la foto de calle a la captura de momentos y emociones con precisión técnica, sensibilidad artística y edición profesional.</p>
+
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="IMG/profile_newspaper.jpg?auto=format&fit=crop&w=1000&q=85" alt="Philippe Fotógrafo" /> <!-- https://images.unsplash.com/photo-1554048612-b6a482bc67e5 -->
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Pasión por crear imágenes que ilusionan</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+             Combino dirección activa, esquemas de luz y retoque digital avanzado para garantizar resultados memorables en cada sesión. Con experiencia en circuito y el mundo automotriz, grabación y edición de eventos corporativos y entrevistas, festivales y fiestas. A veces se requiere velocidad para captar el instante y otras cuidado y esmero para componer la escena adecuada.
+          </p>
+
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <h4 class="pillar-title">Retrato</h4>
+              <p class="pillar-text">Urbano o en estudio. Dirección personalizada y autenticidad.</p>
+            </div>
+            <div class="pillar-card">
+              <h4 class="pillar-title">Automotriz</h4>
+              <p class="pillar-text">Paning shots, narrativa visual y estética de catálogo.</p>
+            </div>
+            <div class="pillar-card">
+              <h4 class="pillar-title">Eventos</h4>
+              <p class="pillar-text">captura momentos y emociones en eventos sociales y corporativos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA SECTION -->
+  <section id="galeria">
+    <div class="container">
+      <h2 class="section-title">Galería Fotográfica</h2>
+      <p class="section-subtitle">Selección de capturas. Haz clic en cualquier imagen para ampliarla.</p>
+
+      <div class="gallery-controls">
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="retrato">Retrato</button>
+          <button class="filter-btn" data-filter="automotriz">Automotriz</button>
+          <button class="filter-btn" data-filter="eventos">Eventos</button>
+        </div>
+      </div>
+
+      <div id="gallery-grid" class="gallery-grid">
+        <!-- Renderizado dinámicamente con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Visualizador de Fotografía">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Cerrar modal">✕</button>
+      <div class="lightbox-image-wrap">
+        <button id="lightbox-prev" class="lightbox-nav-btn prev" aria-label="Foto anterior">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Vista previa de alta resolución" />
+        <button id="lightbox-next" class="lightbox-nav-btn next" aria-label="Foto siguiente">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div id="lightbox-counter" class="lightbox-counter">1 / 50</div>
+      </div>
+      <div class="lightbox-sidebar">
+        <div>
+          <span id="lightbox-category" class="pricing-badge">Categoría</span>
+          <h3 id="lightbox-title" style="margin: 1rem 0 0.5rem 0; font-family: var(--font-mono);">Título de la Imagen</h3>
+          <p id="lightbox-desc" style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Descripción de la toma...</p>
+          <p id="lightbox-location" style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; font-family: var(--font-mono);">Ubicación</p>
+        </div>
+
+        <a href="#contacto" onclick="document.getElementById('lightbox-modal').classList.remove('active')" class="btn-cta" style="width: 100%; text-align: center; justify-content: center; margin-top: 1.5rem;">Reservar Sesión Similar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS Y PAQUETES -->
+  <section id="servicios">
+    <div class="container">
+      <h2 class="section-title">Servicios Especializados</h2>
+      <p class="section-subtitle">Tarifas transparentes adaptadas a las exigencias de cada disciplina fotográfica con entregables claros desde el primer momento.</p>
+
+      <div class="pricing-grid">
+        <!-- 1. Retrato -->
+        <div class="pricing-card">
+          <div>
+            <div class="pricing-header">
+              <span class="pricing-badge">Personal - Profesional</span>
+              <span class="pricing-price" style="margin-left: 1rem;">Desde $1,500 MXN</span>
+            </div>
+            <h3 class="pricing-title">Sesión Retrato Essential & Editorial</h3>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.4;">
+              Ideal para actores, directivos, modelos, branding personal o simple diversión.
+            </p>
+
+            <div style="background: rgba(0,0,0,0.5); border: 1px solid var(--border-color); border-radius: 0.5rem; padding: 0.6rem 0.8rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              <div>
+                <span style="display:block; font-size:0.6rem; text-transform:uppercase; color:var(--text-muted);">Duración</span>
+                <span style="color:#fff;">1.5 Horas</span>
+              </div>
+              <div>
+                <span style="display:block; font-size:0.6rem; text-transform:uppercase; color:var(--text-muted);">Entrega</span>
+                <span style="color:#fff;">48 - 72 Horas</span>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Hasta 90 minutos de sesión fotográfica</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Asesoramiento previo de vestuario y dirección</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Elección entre Estudio Profesional o Exteriores</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> 15 Fotos en alta resolución retocadas</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Galería HD privada en línea</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Optimización para impresión y redes</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Derechos de uso personal y comercial básico</li>
+            </ul>
+          </div>
+          <a href="#contacto" class="btn-secondary" style="width:100%; justify-content:center; text-align:center;">Reservar Sesión Retrato</a>
+        </div>
+
+        <!-- 2. Automotriz (Featured / Popular) -->
+        <div class="pricing-card featured">
+          <div>
+            <div class="pricing-header">
+              <span class="pricing-badge" style="background:#000; color:#fff;">Coches de calle, clásicos y exóticos</span>
+              <span class="pricing-price" style="color:#000; margin-left: 1rem;">Desde $1.900 MXN</span>
+            </div>
+            <h3 class="pricing-title" style="color:#000;">Paquete Automotriz & Rig</h3>
+            <p style="font-size: 0.75rem; color: #404040; margin-bottom: 1rem; line-height: 1.4;">
+              Para amantes de los autos, coleccionistas, marcas y concesionarios.
+            </p>
+
+            <div style="background: rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.1); border-radius: 0.5rem; padding: 0.6rem 0.8rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: #333; margin-bottom: 1.25rem;">
+              <div>
+                <span style="display:block; font-size:0.6rem; text-transform:uppercase; color:#666;">Duración</span>
+                <span style="color:#000; font-weight:700;">2.5 Horas</span>
+              </div>
+              <div>
+                <span style="display:block; font-size:0.6rem; text-transform:uppercase; color:#666;">Entrega</span>
+                <span style="color:#000; font-weight:700;">3 - 5 Días</span>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li><span style="color:#000; font-weight:bold; margin-right: 0.5rem;">✓</span> Hasta 2.5 horas de rodaje y sesión</li>
+              <li><span style="color:#000; font-weight:bold; margin-right: 0.5rem;">✓</span> Lugar a elegir (Garaje, circuito, carretera, spot)</li>
+              <li><span style="color:#000; font-weight:bold; margin-right: 0.5rem;">✓</span> Vehículo estático (exterior e interior)</li>
+              <li><span style="color:#000; font-weight:bold; margin-right: 0.5rem;">✓</span> Shots en movimiento / barridos</li>
+              <li><span style="color:#000; font-weight:bold; margin-right: 0.5rem;">✓</span> 20 Fotos finales con edición</li>
+              <li><span style="color:#000; font-weight:bold; margin-right: 0.5rem;">✓</span> Inclusión de tomas aéreas con Drone 4K (opcional)</li>
+              <li><span style="color:#000; font-weight:bold; margin-right: 0.5rem;">✓</span> Galería web HD + Archivos optimizados</li>
+            </ul>
+          </div>
+          <a href="#contacto" class="btn-cta" style="width:100%; justify-content:center; text-align:center;">Reservar Sesión Automotriz</a>
+        </div>
+
+        <!-- 3. Eventos -->
+        <div class="pricing-card">
+          <div>
+            <div class="pricing-header">
+              <span class="pricing-badge">Eventos & Celebraciones</span>
+              <span class="pricing-price" style="margin-left: 1rem;">Desde $7,800 MXN</span>
+            </div>
+            <h3 class="pricing-title">Cobertura Completa de Eventos</h3>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.4;">
+              Galas corporativas, inauguración de negocio, actos y eventos académicos, celebraciones VIP. (Presupuesto a parte para bodas y cumpleaños)
+            </p>
+
+            <div style="background: rgba(0,0,0,0.5); border: 1px solid var(--border-color); border-radius: 0.5rem; padding: 0.6rem 0.8rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              <div>
+                <span style="display:block; font-size:0.6rem; text-transform:uppercase; color:var(--text-muted);">Duración</span>
+                <span style="color:#fff;">4 Horas</span>
+              </div>
+              <div>
+                <span style="display:block; font-size:0.6rem; text-transform:uppercase; color:var(--text-muted);">Entrega</span>
+                <span style="color:#fff;">Preview 24h<br>Final 5 dìas</br></span>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Hasta 4 horas de cobertura continua</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Avance exprés de 10 fotos en 24h para RRSS</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Entrega completa (+100 fotos corregidas)</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Ambientación, invitados, ponentes y protocolo</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Equipo fotográfico silencioso y discreto</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Galería web interactiva descargable HD</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Derechos de uso comercial corporativo</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Contrato de confidencialidad (NDA) disponible</li>
+            </ul>
+          </div>
+          <a href="#contacto" class="btn-secondary" style="width:100%; justify-content:center; text-align:center;">Reservar Cobertura Evento</a>
+        </div>
+
+        <!-- 4. Producción Comercial -->
+        <div class="pricing-card">
+          <div>
+            <div class="pricing-header">
+              <span class="pricing-badge">Proyectos Especiales</span>
+              <span class="pricing-price" style="margin-left: 1rem;">Desde $17,000 MXN</span>
+            </div>
+            <h3 class="pricing-title">Producción Comercial & Contenidos para PYMEs y Marcas</h3>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.4;">
+              Para campañas publicitarias, eventos multidía o proyectos a medida.
+            </p>
+
+            <div style="background: rgba(0,0,0,0.5); border: 1px solid var(--border-color); border-radius: 0.5rem; padding: 0.6rem 0.8rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              <div>
+                <span style="display:block; font-size:0.6rem; text-transform:uppercase; color:var(--text-muted);">Duración</span>
+                <span style="color:#fff;">A Medida</span>
+              </div>
+              <div>
+                <span style="display:block; font-size:0.6rem; text-transform:uppercase; color:var(--text-muted);">Entrega</span>
+                <span style="color:#fff;">Según Cronograma</span>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Jornada completa o múltiple con asistentes</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Planificación de arte, moodboard y scouting</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Entrega de lote completo en alta definición</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Retoque digital avanzado de grado editorial</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Licencia comercial internacional sin límites</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Opción de captura conectada (Tethering)</li>
+              <li><span style="color:var(--text-primary); margin-right: 0.5rem;">✓</span> Contrato de confidencialidad (NDA) disponible</li>
+            </ul>
+          </div>
+          <a href="#contacto" class="btn-secondary" style="width:100%; justify-content:center; text-align:center;">Cotizar Proyecto a Medida</a>
+        </div>
+      </div>
+
+      <!-- SERVICIOS OPCIONALES Y COMPLEMENTOS -->
+      <div style="margin-top: 3rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 1rem; padding: 2rem;">
+        <h3 style="font-family: var(--font-mono); font-size: 1.1rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span>✚</span> Servicios Opcionales y Complementos
+        </h3>
+        <!--  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+          <div style="background: var(--bg-body); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.8rem; font-weight: 600;">Entrega Exprés 24 Horas</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">+$1,500 MXN</span>
+          </div> -->
+          <div style="background: var(--bg-body); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.8rem; font-weight: 600;">Drone 4K Fotografía/Video</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">+$2,200 MXN</span>
+          </div>
+          <div style="background: var(--bg-body); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.8rem; font-weight: 600;">Foto Extra Editada Individual</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">+$250 MXN</span>
+          </div>
+          <div style="background: var(--bg-body); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.8rem; font-weight: 600;">Álbum Impreso de Lujo (30x30)</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">+$3,400 MXN</span>
+          </div>
+          <div style="background: var(--bg-body); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.8rem; font-weight: 600;">Segundo Fotógrafo Cobertura</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">+$3,600 MXN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENLACE A CALCULADORA STANDALONE -->
+  <section id="cotizador-callout" style="background: var(--bg-card); text-align: center; padding: 4rem 0;">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-title">¿Necesitas un Presupuesto a Medida?</h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem;">Accede a nuestra calculadora para cotizar tu sesión personalizada en segundos o mándanos un correo con tu idea.</p>
+      <a href="calculadora.html" class="btn-cta" style="font-size: 0.85rem; padding: 0.85rem 2rem;">Abrir Calculadora de Presupuesto ➔</a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <h2 class="section-title">Reserva tu Sesión</h2>
+      <p class="section-subtitle">Escríbeme directamente o envía el formulario para acordar fecha, concepto e ideas.</p>
+
+      <div class="contact-grid">
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Detalles de Contacto</h3>
+          <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom: 1.5rem; line-height:1.6;">
+            Respondo a todas las consultas en menos de 24 horas. También disponible para proyectos fuera de Guadalajara.
+          </p>
+          <div style="font-family:var(--font-mono); font-size:0.85rem; space-y: 0.5rem;">
+            <p><strong>Email:</strong> contact@philippefoto.cc</p>
+            <p><strong>Ubicación:</strong> Guadalajara, México | Barcelona, España</p>
+            <p><strong>Atención:</strong> Lunes a Sábado, 09:00 - 20:00</p>
+          </div>
+        </div>
+
+        <div>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nombre completo *" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Correo electrónico *" required>
+            </div>
+            <div class="form-group">
+              <select id="contact-service" class="form-control" required>
+                <option value="" disabled selected>Tipo de sesión o consulta *</option>
+                <option value="retrato">Sesión Retrato Essential & Editorial</option>
+                <option value="automotriz">Paquete Automotriz Cinematic & Rig</option>
+                <option value="eventos">Cobertura Completa de Eventos</option>
+                <option value="comercial">Producción Comercial & Campañas</option>
+                <option value="otras">Otras solicitudes o dudas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea id="contact-message" class="form-control" rows="4" placeholder="Cuéntame sobre tu proyecto o fecha deseada..." required></textarea>
+            </div>
+            <button type="submit" class="btn-cta" style="width:100%; justify-content:center; padding: 0.85rem;">Enviar Mensaje</button>
+            <div id="contact-success-alert" style="display:none; margin-top:1rem; padding:0.85rem; border-radius:0.5rem; background:#10b981; color:#000; font-weight:bold; font-size:0.8rem; text-align:center;">
+              ¡Mensaje enviado con éxito! Te responderé pronto.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <p>© 2026 PHILIPPE FOTO. Todos los derechos reservados.</p>
+      <p style="font-family:var(--font-mono); font-size:0.75rem;">Todas las fotografías de la página son de mi autoría</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

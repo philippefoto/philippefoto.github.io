@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Presupuesto - PHILIPPE FOTO</title>
+  <meta name="description" content="Calculadora interactiva de presupuesto independiente para sesiones de fotografía profesional por PHILIPPE FOTO.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+ <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon" aria-label="Logo Philippe Foto">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="camera-icon-svg">
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+            <circle cx="12" cy="13" r="3"/>
+          </svg>
+        </div>
+        PHILIPPE <span>FOTO</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#sobre-mi" class="nav-link">Sobre Mí</a></li>
+          <li><a href="index.html#galeria" class="nav-link">Galería</a></li>
+          <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="calculadora.html" class="nav-link active">Cotizador</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="index.html#contacto" class="btn-cta">Reservar Sesión</a>
+    </div>
+  </header>
+
+  <!-- CALCULADORA HERO HEADER -->
+  <section style="padding-top: 10rem; padding-bottom: 3rem; background: var(--bg-card); border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="max-width: 900px; text-align: center;">
+      <a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-bottom: 1rem;">← Volver al sitio principal</a>
+      <h1 class="section-title" style="font-size: 3rem;">Calculadora de Presupuesto</h1>
+      <p class="section-subtitle" style="margin-bottom: 0;">
+        Configura los detalles de tu proyecto fotográfico. Selecciona el tipo de servicio, las horas de cobertura y los extras para conocer el costo aproximado al instante. Toma en cuenta que esta herramienta es a título orientativo para el cálculo de las horas y la cantidad de fotos editadas. Dado que tanto configurar 1 hora para 60 fotos editadas, como 8 horas para solo 10, no es realista. Gracias.
+      </p>
+    </div>
+  </section>
+
+  <!-- WIDGET CALCULADORA SECCIÓN STANDALONE -->
+  <section id="calculadora-app" style="padding: 5rem 0;">
+    <div class="container">
+      <div class="calc-box">
+        <div>
+          <!-- 1. Disciplina -->
+          <div class="calc-group">
+            <span class="calc-label">1. Disciplina de Fotografía</span>
+            <div class="calc-buttons">
+              <button type="button" class="calc-btn calc-cat-btn active" data-cat="retrato">Retrato</button>
+              <button type="button" class="calc-btn calc-cat-btn" data-cat="automotriz">Automotriz</button>
+              <button type="button" class="calc-btn calc-cat-btn" data-cat="eventos">Eventos</button>
+            </div>
+          </div>
+
+          <!-- 2. Duración Horas -->
+          <div class="calc-group" style="margin-top: 1.5rem;">
+            <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
+              <span class="calc-label">2. Horas de Cobertura</span>
+              <span id="calc-hours-val" style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700; color:var(--text-primary);">2 Horas</span>
+            </div>
+            <input type="range" id="calc-hours" class="calc-slider" min="1" max="8" value="2">
+            <div style="display:flex; justify-content:space-between; font-size:0.7rem; color:var(--text-muted); font-family:var(--font-mono); margin-top:0.25rem;">
+              <span>1h (Express)</span>
+              <span>4h (Medio Día)</span>
+              <span>8h (Jornada)</span>
+            </div>
+          </div>
+
+          <!-- 3. Fotos Retocadas Slider -->
+          <div class="calc-group" style="margin-top: 1.5rem;">
+            <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
+              <span class="calc-label">3. Fotos Retocadas</span>
+              <span id="calc-photos-val" style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700; color:var(--text-primary);">15 Fotos</span>
+            </div>
+            <input type="range" id="calc-photos" class="calc-slider" min="5" max="60" step="5" value="15">
+            <div style="display:flex; justify-content:space-between; font-size:0.7rem; color:var(--text-muted); font-family:var(--font-mono); margin-top:0.25rem;">
+              <span>5 Fotos</span>
+              <span>30 Fotos</span>
+              <span>60+ Fotos</span>
+            </div>
+          </div>
+
+          <!-- 4. Locación Buttons -->
+          <div class="calc-group" style="margin-top: 1.5rem;">
+            <span class="calc-label">4. Tipo de Locación</span>
+            <div class="calc-buttons">
+              <button type="button" class="calc-btn calc-loc-btn active" data-loc="exterior">Exterior</button>
+              <button type="button" class="calc-btn calc-loc-btn" data-loc="estudio">Estudio (+$1,200)</button>
+              <button type="button" class="calc-btn calc-loc-btn" data-loc="privada">Pista/Privada (+$1,800)</button>
+            </div>
+          </div>
+
+          <!-- 5. Opciones / Extras -->
+          <div class="calc-group" style="margin-top: 1.5rem;">
+            <span class="calc-label">5. Opciones & Complementos</span>
+            <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:0.5rem;">
+              <label style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--text-secondary); cursor:pointer;">
+                <input type="checkbox" id="calc-express" style="accent-color: #fff; width: 16px; height: 16px;">
+                <span>Entrega Exprés 24 Horas (+$1,500 MXN)</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--text-secondary); cursor:pointer;">
+                <input type="checkbox" id="calc-drone" style="accent-color: #fff; width: 16px; height: 16px;">
+                <span>Fotografía / Video Aéreo con Drone (+$2,200 MXN)</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--text-secondary); cursor:pointer;">
+                <input type="checkbox" id="calc-album" style="accent-color: #fff; width: 16px; height: 16px;">
+                <span>Álbum Impreso de Lujo Encuadernado (+$3,400 MXN)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Resumen -->
+        <div class="calc-summary-card">
+          <div>
+            <span class="calc-label">Presupuesto Total Estimado</span>
+            <div id="calc-total" class="total-amount" style="font-size: 2.5rem; line-height: 1.2;">$4,700 MXN</div>
+            <p style="font-size:0.8rem; color:var(--text-secondary); line-height:1.4; margin-top: 0.5rem;" id="calc-details">
+              Incluye edición digital procesada en RAW, galería privada y derechos de uso personal.
+            </p>
+          </div>
+          <a href="#contacto" id="btn-aplicar-cotizacion" class="btn-cta" style="margin-top:2rem; justify-content:center; text-align:center;">Reservar con este Presupuesto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO ASOCIADO -->
+  <section id="contacto" style="border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <h2 class="section-title">Confirma tu Reserva</h2>
+      <p class="section-subtitle">Envía tu solicitud con el presupuesto estimado preseleccionado.</p>
+
+      <div class="contact-grid">
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Contacto Directo</h3>
+          <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom: 1.5rem; line-height:1.6;">
+            Tu presupuesto estimado se adjuntará automáticamente al mensaje. Responderé en menos de 24 horas.
+          </p>
+          <div style="font-family:var(--font-mono); font-size:0.85rem;">
+            <p style="margin-bottom:0.5rem;"><strong>Email:</strong> contact@philippefoto.cc</p>
+            <p style="margin-bottom:0.5rem;"><strong>Ubicación:</strong> Madrid, España</p>
+            <p><strong>Atención:</strong> Lunes a Sábado, 09:00 - 20:00</p>
+          </div>
+        </div>
+
+        <div>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nombre completo *" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Correo electrónico *" required>
+            </div>
+            <div class="form-group">
+              <select id="contact-service" class="form-control" required>
+                <option value="" disabled selected>Tipo de sesión o consulta *</option>
+                <option value="retrato">Sesión Retrato Essential & Editorial</option>
+                <option value="automotriz">Paquete Automotriz Cinematic & Rig</option>
+                <option value="eventos">Cobertura Completa de Eventos</option>
+                <option value="comercial">Producción Comercial & Campañas</option>
+                <option value="otras">Otras solicitudes o dudas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea id="contact-message" class="form-control" rows="5" placeholder="Comentarios adicionales o fecha tentativa..." required></textarea>
+            </div>
+            <button type="submit" class="btn-cta" style="width:100%; justify-content:center; padding: 0.85rem;">Enviar Reserva</button>
+            <div id="contact-success-alert" style="display:none; margin-top:1rem; padding:0.85rem; border-radius:0.5rem; background:#10b981; color:#000; font-weight:bold; font-size:0.8rem; text-align:center;">
+              ¡Reserva enviada con éxito! Te contactaremos a la brevedad.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <p>© 2026 PHILIPPE FOTO. Todos los derechos reservados.</p>
+      <p style="font-family:var(--font-mono); font-size:0.75rem;"><a href="index.html" style="color:var(--text-secondary);">Volver al Inicio</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
