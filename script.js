@@ -20,6 +20,7 @@
  */
 // URL OPCIONAL DE IMAGEN DE FONDO HORIZONTAL DEL HERO
 const HERO_BACKGROUND_IMAGE_URL = 'IMG/hero_2026-05-21.png';
+const CONTACT_EMAIL = 'contact@philippefoto.cc';
 //https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=2000&q=85'
 /**
  * CONFIGURACIÓN DE RUTA BASE DE IMÁGENES:
@@ -1030,18 +1031,56 @@ function updateCalculator() {
 // Formulario de Contacto
 function setupContactForm() {
   const form = document.getElementById('contact-form');
-  const alert = document.getElementById('contact-success-alert');
+  const alertBox = document.getElementById('contact-success-alert');
+  const fallbackLink = document.getElementById('contact-mailto-fallback');
 
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      if (alert) {
-        alert.style.display = 'block';
-        form.reset();
-        setTimeout(() => {
-          alert.style.display = 'none';
-        }, 5000);
+
+      const nameInput = document.getElementById('contact-name') || form.querySelector('input[type="text"]');
+      const emailInput = document.getElementById('contact-email') || form.querySelector('input[type="email"]');
+      const serviceSelect = document.getElementById('contact-service');
+      const messageInput = document.getElementById('contact-message') || form.querySelector('textarea');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const serviceText = serviceSelect && serviceSelect.selectedIndex >= 0
+        ? serviceSelect.options[serviceSelect.selectedIndex].text
+        : 'Consulta general';
+      const message = messageInput ? messageInput.value.trim() : '';
+
+      const subject = `Nueva solicitud: ${serviceText}${name ? ' - ' + name : ''}`;
+      const bodyLines = [
+        'Hola Philippe,',
+        '',
+        'Te contacto desde el formulario de tu sitio web con los siguientes datos:',
+        '',
+        `Nombre: ${name}`,
+        `Correo de respuesta: ${email}`,
+        `Tipo de sesión / consulta: ${serviceText}`,
+        '',
+        'Mensaje:',
+        message
+      ];
+
+      const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+      if (fallbackLink) {
+        fallbackLink.setAttribute('href', mailtoUrl);
       }
+
+      if (alertBox) {
+        alertBox.style.display = 'block';
+      }
+
+      // Disparar apertura del programa de correo predeterminado sin usar window.open
+      const tempLink = document.createElement('a');
+      tempLink.href = mailtoUrl;
+      tempLink.style.display = 'none';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
     });
   }
 }
