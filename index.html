@@ -370,7 +370,7 @@
             Respondo a todas las consultas en menos de 24 horas. También disponible para proyectos fuera de Guadalajara.
           </p>
           <div style="font-family:var(--font-mono); font-size:0.85rem; space-y: 0.5rem;">
-            <p><strong>Email:</strong> contact@philippefoto.cc</p>
+            <p><strong>Email:</strong> <a href="mailto:contact@philippefoto.cc" style="color:#fff; text-decoration:underline;">contact@philippefoto.cc</a></p>
             <p><strong>Ubicación:</strong> Guadalajara, México | Barcelona, España</p>
             <p><strong>Atención:</strong> Lunes a Sábado, 09:00 - 20:00</p>
           </div>
@@ -379,13 +379,13 @@
         <div>
           <form id="contact-form">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Nombre completo *" required>
+              <input id="contact-name" name="name" type="text" class="form-control" placeholder="Nombre completo *" required>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="Correo electrónico *" required>
+              <input id="contact-email" name="email" type="email" class="form-control" placeholder="Correo electrónico *" required>
             </div>
             <div class="form-group">
-              <select id="contact-service" class="form-control" required>
+              <select id="contact-service" name="service" class="form-control" required>
                 <option value="" disabled selected>Tipo de sesión o consulta *</option>
                 <option value="retrato">Sesión Retrato Essential & Editorial</option>
                 <option value="automotriz">Paquete Automotriz Cinematic & Rig</option>
@@ -395,11 +395,15 @@
               </select>
             </div>
             <div class="form-group">
-              <textarea id="contact-message" class="form-control" rows="4" placeholder="Cuéntame sobre tu proyecto o fecha deseada..." required></textarea>
+              <textarea id="contact-message" name="message" class="form-control" rows="4" placeholder="Cuéntame sobre tu proyecto o fecha deseada..." required></textarea>
             </div>
-            <button type="submit" class="btn-cta" style="width:100%; justify-content:center; padding: 0.85rem;">Enviar Mensaje</button>
-            <div id="contact-success-alert" style="display:none; margin-top:1rem; padding:0.85rem; border-radius:0.5rem; background:#10b981; color:#000; font-weight:bold; font-size:0.8rem; text-align:center;">
-              ¡Mensaje enviado con éxito! Te responderé pronto.
+            <button type="submit" class="btn-cta" style="width:100%; justify-content:center; padding: 0.85rem;">Abrir Correo y Enviar Mensaje</button>
+            <div id="contact-success-alert" style="display:none; margin-top:1rem; padding:1rem; border-radius:0.5rem; background:rgba(16, 185, 129, 0.12); border:1px solid rgba(16, 185, 129, 0.4); color:#fff; font-size:0.82rem; line-height:1.5; text-align:left;">
+              <strong style="color:#10b981; display:block; margin-bottom:0.35rem;">Abriendo tu aplicación de correo...</strong>
+              <span>Hemos preparado tu mensaje para <strong>contact@philippefoto.cc</strong>. Revisa el borrador en tu app de correo y pulsa <strong>Enviar</strong>.</span>
+              <div style="margin-top:0.65rem;">
+                <a id="contact-mailto-fallback" href="mailto:contact@philippefoto.cc" style="color:#10b981; font-weight:bold; text-decoration:underline;">¿No se abrió automáticamente? Haz clic aquí para abrir tu correo</a>
+              </div>
             </div>
           </form>
         </div>
